@@ -1,5 +1,9 @@
 source "https://rubygems.org"
 
+# NOTE -- there is something weird on windows with this project. It tries to use a version of eventmachine that doesn't work
+# Likely may have to manually edit the Gemfile.lock to reference
+#     eventmachine (1.2.7)
+
 # Hello! This is where you manage which Jekyll version is used to run.
 # When you want to use a different version, change it below, save the
 # file and run `bundle install`. Run Jekyll with `bundle exec`, like so:
@@ -10,6 +14,9 @@ source "https://rubygems.org"
 # Happy Jekylling!
 
 gem "github-pages", group: :jekyll_plugins
+
+gem "tzinfo"
+gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw]
 
 # If you want to use Jekyll native, uncomment the line below.
 # To upgrade, run `bundle update`.
